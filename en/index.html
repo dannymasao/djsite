@@ -1,122 +1,209 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <title>Danny MW</title>
-    <meta name="description" content="A DJ based in tokyo.">
-    <script>document.documentElement.classList.remove('no-js');</script>
-    <style type="text/css">.sr{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}@-webkit-keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.loading-screen{position:fixed;top:0;left:0;width:100%;height:100vh;height:calc(var(--vh, 1vh)*100);z-index:1000;background-color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:opacity 1s ease-in-out;transition:opacity 1s ease-in-out}.is-fading .loading-screen{opacity:0}.is-loaded .loading-screen{display:none!important}.loader{overflow:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load 1.1s linear infinite;animation:load 1.1s linear infinite;color:#1a202c}.loader svg{fill:currentColor;width:4rem;height:4rem;display:inline-block}.no-js .loading-screen{display:none!important}</style>
-    <link rel="stylesheet" href="../css/styles.min.css?v=0.0.1">
-  </head>
-  <body class="relative"> 
-    <div class="loading-screen">
-      <div class="loader"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M100,0A100,100,0,1,0,200,100,100,100,0,0,0,100,0ZM14.35,56.67a96.65,96.65,0,0,1,42.49-42.4l.91,1.78A94.57,94.57,0,0,0,16.14,57.57ZM25.1,62.05l-1.79-.89a86.56,86.56,0,0,1,38.11-38L62.34,25A84.54,84.54,0,0,0,25.1,62.05Zm7.15,3.58A76.49,76.49,0,0,1,66,32.06l.92,1.78A74.47,74.47,0,0,0,34,66.52Zm8.94,4.47A66.38,66.38,0,0,1,70.58,41l.91,1.77A64.41,64.41,0,0,0,43,71Zm10.73,5.36-1.79-.89a56.34,56.34,0,0,1,25-24.74l.91,1.78A54.34,54.34,0,0,0,51.92,75.46ZM100,135a35,35,0,1,1,35-35A35,35,0,0,1,100,135Z"/></svg></div>
-      <div class="sr">Loading...</div>
-    </div>
-    <div class="bg-image" id="bgImage"></div>
-    <div class="content-wrapper" id="content">
-      <div class="container mx-auto">
-        <div class="mx-5 md:mx-10">
-          <header class="header flex flex-col text-white pb-16 relative">
-            <h1 class="site-title leading-none mt-auto animate animate-to-right">
-               <svg xmlns="http://www.w3.org/2000/svg" width="295.21" height="63" viewBox="0 0 295.21 63"><path d="M15.66,0Q23,0,26.73,4t3.69,11.61V47.43q0,7.65-3.69,11.61T15.66,63H0V0ZM9.9,54h5.58a4.77,4.77,0,0,0,3.73-1.44c.87-1,1.31-2.52,1.31-4.68V15.12c0-2.16-.44-3.72-1.31-4.68A4.77,4.77,0,0,0,15.48,9H9.9Z"/><path d="M57.77,63,56.06,51.57H43.91L42.2,63H33.11L43.19,0H57.68L67.76,63ZM54.71,43,49.94,11.16,45.17,43Z"/><path d="M82.17,63H73.26V0H85.68L95.85,37.71V0h8.82V63H94.5L82.17,17.37Z"/><path d="M120.6,63h-8.91V0h12.42l10.17,37.71V0h8.82V63H132.93L120.6,17.37Z"/><path d="M147,0h10.35l7.56,28.71L172.44,0h9.45L169.38,42.12V63h-9.9V42.12Z"/><path d="M227.52,0h13.77V63h-9.36V17.82L225.09,63h-9.36l-7.38-44.55V63h-8.64V0h13.77l7.29,44.73Z"/><path d="M267.84,63H254.25l-7-63h9.64l5.3,49.68L266.94,0h9.54l4.95,50,5.13-50h8.65l-7,63H275l-3.6-33.57Z"/></svg><span class="sr">DANNY MW</span></h1><span class="header-border animate animate-to-right delay-1"></span>
-            <p class="leading-none text-lg animate animate-to-right delay-2">A DJ Based in Tokyo</p>
-            <ul class="follow-list py-10 animate animate-to-left delay-3">
-              <li class="follow-list-item"><a href="https://twitter.com/DannyMasao1024" target="_blank">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></li>
-              <li class="follow-list-item"><a href="https://www.instagram.com/dannymasao/" target="_blank">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="448" height="512" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li>
-              <li class="follow-list-item"><a href="https://www.mixcloud.com/dannymasao/" target="_blank">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="640" height="512" viewBox="0 0 640 512"><path d="M424.43 219.729C416.124 134.727 344.135 68 256.919 68c-72.266 0-136.224 46.516-159.205 114.074-54.545 8.029-96.63 54.822-96.63 111.582 0 62.298 50.668 112.966 113.243 112.966h289.614c52.329 0 94.969-42.362 94.969-94.693 0-45.131-32.118-83.063-74.48-92.2zm-20.489 144.53H114.327c-39.04 0-70.881-31.564-70.881-70.604s31.841-70.604 70.881-70.604c18.827 0 36.548 7.475 49.838 20.766 19.963 19.963 50.133-10.227 30.18-30.18-14.675-14.398-32.672-24.365-52.053-29.349 19.935-44.3 64.79-73.926 114.628-73.926 69.496 0 125.979 56.483 125.979 125.702 0 13.568-2.215 26.857-6.369 39.594-8.943 27.517 32.133 38.939 40.147 13.29 2.769-8.306 4.984-16.889 6.369-25.472 19.381 7.476 33.502 26.303 33.502 48.453 0 28.795-23.535 52.33-52.607 52.33zm235.069-52.33c0 44.024-12.737 86.386-37.102 122.657-4.153 6.092-10.798 9.414-17.72 9.414-16.317 0-27.127-18.826-17.443-32.949 19.381-29.349 29.903-63.682 29.903-99.122s-10.521-69.773-29.903-98.845c-15.655-22.831 19.361-47.24 35.163-23.534 24.366 35.993 37.102 78.356 37.102 122.379zm-70.88 0c0 31.565-9.137 62.021-26.857 88.325-4.153 6.091-10.798 9.136-17.72 9.136-17.201 0-27.022-18.979-17.443-32.948 13.013-19.104 19.658-41.255 19.658-64.513 0-22.981-6.645-45.408-19.658-64.512-15.761-22.986 19.008-47.095 35.163-23.535 17.719 26.026 26.857 56.483 26.857 88.047z"/></svg></a></li>
-              <li class="follow-list-item lang-link"><a href="../index.html">JAPANESE  </a></li>
-            </ul>
-          </header>
-          <main class="bg-white py-10 px-5 md:px-10 rounded-sm"> 
-            <section>
-              <header class="section-title" data-sal="slide-up"><span class="record-icon"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M100,0A100,100,0,1,0,200,100,100,100,0,0,0,100,0ZM14.35,56.67a96.65,96.65,0,0,1,42.49-42.4l.91,1.78A94.57,94.57,0,0,0,16.14,57.57ZM25.1,62.05l-1.79-.89a86.56,86.56,0,0,1,38.11-38L62.34,25A84.54,84.54,0,0,0,25.1,62.05Zm7.15,3.58A76.49,76.49,0,0,1,66,32.06l.92,1.78A74.47,74.47,0,0,0,34,66.52Zm8.94,4.47A66.38,66.38,0,0,1,70.58,41l.91,1.77A64.41,64.41,0,0,0,43,71Zm10.73,5.36-1.79-.89a56.34,56.34,0,0,1,25-24.74l.91,1.78A54.34,54.34,0,0,0,51.92,75.46ZM100,135a35,35,0,1,1,35-35A35,35,0,0,1,100,135Z"/></svg></span>
-                <h2>
-                   <svg xmlns="http://www.w3.org/2000/svg" width="166.69" height="64.44" viewBox="0 0 166.69 64.44"><path d="M27.81.72H41.58v63H32.22V18.54L25.38,63.72H16L8.64,19.17V63.72H0V.72H13.77l7.29,44.73Z"/><path d="M59.68.72v63h-9.9V.72Z"/><path d="M89.56,31.32l11.07,32.4H90.19l-8.1-24.93L73.9,63.72H64.63L75.7,31.32,65.35.72H75.61l7.47,23.22L90.73.72h9.18Z"/><path d="M129.07,27.27v9H115.48V54.72h17.1v9h-27V.72h27v9h-17.1V27.27Z"/><path d="M141.13,4.1Q144.82,0,152,0t10.89,4.1q3.69,4.1,3.69,11.74v2h-9.36V15.21A7.22,7.22,0,0,0,156,10.49a5.31,5.31,0,0,0-7.38,0,7.22,7.22,0,0,0-1.26,4.72,11.63,11.63,0,0,0,2.11,6.93,43.17,43.17,0,0,0,6.35,6.75,78.65,78.65,0,0,1,5.67,5.71,23.2,23.2,0,0,1,3.69,6,19.87,19.87,0,0,1,1.53,8q0,7.65-3.78,11.74t-11,4.1q-7.2,0-11-4.1T137.17,48.6V44.73h9.36v4.5q0,6.12,5.13,6.12t5.13-6.12a11.64,11.64,0,0,0-2.12-6.93,43,43,0,0,0-6.34-6.75,76.67,76.67,0,0,1-5.67-5.71,23,23,0,0,1-3.69-6,19.87,19.87,0,0,1-1.53-8Q137.44,8.19,141.13,4.1Z"/></svg><span class="sr">MIXES</span></h2>
-              </header>
-              <ul class="img-grid img-grid-mix py-10 img-fade" data-sal="fade">
-                <li><a class="block img-hover" href="https://www.mixcloud.com/dannymasao/grooves-2016/" target="_blank">
-                    <div class="img-thumbnail"><img class="lazyload" data-src="../img/grooves2016.jpg" alt="Grooves 2016のアートワーク"></div>
-                    <h3 class="text-xl font-bold mt-3">Grooves 2016</h3>
-                    <p class="text-sm mt-2">A mix of some of my favorite house, disco and funk tracks from 2016.</p></a></li>
-                <li><a class="block img-hover" href="https://www.mixcloud.com/dannymasao/vibes-2016/" target="_blank">
-                    <div class="img-thumbnail"><img class="lazyload" data-src="../img/vibes2016.jpg" alt="Vibes 2016のアートワーク"></div>
-                    <h3 class="text-xl font-bold mt-3">Vibes 2016</h3>
-                    <p class="text-sm mt-2">A mix of some of my favorite hip hop, beats and soul tracks from 2016.    </p></a></li>
-                <li><a class="block img-hover" href="https://www.mixcloud.com/dannymasao/vibez-2015/" target="_blank">
-                    <div class="img-thumbnail"><img class="lazyload" data-src="../img/vibez2015.jpg" alt="Vibez 2015のアートワーク"></div>
-                    <h3 class="text-xl font-bold mt-3">Vibez 2015</h3>
-                    <p class="text-sm mt-2">Some of my favorite hiphop, beat music and soul tracks from 2015.</p></a></li>
-                <li><a class="block img-hover" href="https://www.mixcloud.com/dannymasao/laser-gun-funk-mixed-by-shade-sky/" target="_blank">
-                    <div class="img-thumbnail"><img class="lazyload" data-src="../img/lasergunfunk.jpg" alt="Laser Gun Funkのアートワーク"></div>
-                    <h3 class="text-xl font-bold mt-3">Laser Gun Funk</h3>
-                    <p class="text-sm mt-2">Hiphop, neo soul, and dance tracks that are inspired by or reworks of '80s boogie synth funk.     </p></a></li>
-              </ul>
-            </section>
-            <section class="mt-20">
-              <header class="section-title" data-sal="slide-up"><span class="record-icon"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M100,0A100,100,0,1,0,200,100,100,100,0,0,0,100,0ZM14.35,56.67a96.65,96.65,0,0,1,42.49-42.4l.91,1.78A94.57,94.57,0,0,0,16.14,57.57ZM25.1,62.05l-1.79-.89a86.56,86.56,0,0,1,38.11-38L62.34,25A84.54,84.54,0,0,0,25.1,62.05Zm7.15,3.58A76.49,76.49,0,0,1,66,32.06l.92,1.78A74.47,74.47,0,0,0,34,66.52Zm8.94,4.47A66.38,66.38,0,0,1,70.58,41l.91,1.77A64.41,64.41,0,0,0,43,71Zm10.73,5.36-1.79-.89a56.34,56.34,0,0,1,25-24.74l.91,1.78A54.34,54.34,0,0,0,51.92,75.46ZM100,135a35,35,0,1,1,35-35A35,35,0,0,1,100,135Z"/></svg></span>
-                <h2><svg xmlns="http://www.w3.org/2000/svg" width="211.77" height="64.44" viewBox="0 0 211.77 64.44"><path d="M25.65,4.68q3.69,4,3.69,11.61v8.19q0,7.65-3.69,11.61t-11.07,4H9.9V63.72H0V.72H14.58Q22,.72,25.65,4.68ZM9.9,31.05h4.68a4.67,4.67,0,0,0,3.65-1.35c.8-.9,1.21-2.43,1.21-4.59V15.66c0-2.16-.41-3.69-1.21-4.59a4.67,4.67,0,0,0-3.65-1.35H9.9Z"/><path d="M54.36,60.84A43.32,43.32,0,0,1,54.18,56v-9.9q0-4.32-1.53-6.16T47.7,38.07H44.28V63.72h-9.9V.72H49.32Q57,.72,60.48,4.28T64,15.21v4.95q0,9.72-6.48,12.78a9.12,9.12,0,0,1,5,4.81,20.92,20.92,0,0,1,1.53,8.6v9.72a42.09,42.09,0,0,0,.18,4.36,10.9,10.9,0,0,0,.9,3.29H55.08A14.43,14.43,0,0,1,54.36,60.84ZM44.28,29.07h3.87a5.93,5.93,0,0,0,4.45-1.53q1.49-1.53,1.49-5.13V16.2q0-3.42-1.22-4.95a4.58,4.58,0,0,0-3.82-1.53H44.28Z"/><path d="M73.62,4.14Q77.49,0,84.78,0T95.94,4.14q3.87,4.14,3.87,11.7V48.6q0,7.56-3.87,11.7T84.78,64.44q-7.29,0-11.16-4.14T69.75,48.6V15.84Q69.75,8.28,73.62,4.14Zm11.16,51.3q5.13,0,5.13-6.21v-34Q89.91,9,84.78,9t-5.13,6.21v34Q79.65,55.44,84.78,55.44Z"/><path d="M128.88,28.71v9H116.1v26h-9.9V.72h26.19v9H116.1v19Z"/><path d="M147.06.72v63h-9.9V.72Z"/><path d="M164.16.72v54h16.29v9H154.26V.72Z"/><path d="M208.26,27.27v9H194.67V54.72h17.1v9h-27V.72h27v9h-17.1V27.27Z"/></svg><span class="sr">PROFILE</span></h2>
-              </header>
-              <dl class="profile-list py-10">
-                <div data-sal="slide-up">
-                  <dt>Name</dt>
-                  <dd> 
-                    <p class="font-bold text-2xl" id="djName">Danny MW</p>
-                    <div class="relative mt-2">
-                      <button class="button copy-button" data-clipboard-target="#djName">COPY</button>
-                    </div>
-                  </dd>
-                </div>
-                <div data-sal="slide-up">
-                  <dt>Location</dt>
-                  <dd>Tokyo</dd>
-                </div>
-                <div data-sal="slide-up">
-                  <dt>Genre</dt>
-                  <dd>Hiphop, R&amp;B, neo soul, jazz, funk, disco, boogie, house</dd>
-                </div>
-                <div data-sal="slide-up">
-                  <dt>Bio</dt>
-                  <dd>
-                    <p class="copy-text" id="bioText">I'm a DJ that loves playing at chill spaces like cafes, bars and lounges. You can usually find me behind the decks playing mellow and soulful tracks with head-nodding beats or smooth, dancable jams that gets you moving. </p>
-                    <div class="relative mt-2">
-                      <button class="button copy-button" data-clipboard-target="#bioText">COPY</button>
-                    </div>
-                  </dd>
-                </div>
-                <div data-sal="slide-up">
-                  <dt>Photos</dt>
-                  <dd class="w-full"> 
-                    <ul class="img-photos img-fade" data-sal="fade">
-                      <li><a class="img-thumbnail img-hover" href="../img/dannymw.jpg"><img class="lazyload" data-src="../img/dannymw.jpg" alt="Danny MW DJing"></a></li>
-                      <li><a class="img-thumbnail img-hover" href="../img/dannymw2.jpg"><img class="lazyload" data-src="../img/dannymw2.jpg" alt="Danny MW DJing"></a></li>
-                    </ul>
-                  </dd>
-                </div>
-              </dl>
-            </section>
-          </main>
-          <footer class="footer text-white py-5 text-center">
-            <ul class="follow-list py-10" data-sal="slide-up">
-              <li class="follow-list-item"><a href="https://twitter.com/DannyMasao1024" target="_blank">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></li>
-              <li class="follow-list-item"><a href="https://www.instagram.com/dannymasao/" target="_blank">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="448" height="512" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li>
-              <li class="follow-list-item"><a href="https://www.mixcloud.com/dannymasao/" target="_blank">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="640" height="512" viewBox="0 0 640 512"><path d="M424.43 219.729C416.124 134.727 344.135 68 256.919 68c-72.266 0-136.224 46.516-159.205 114.074-54.545 8.029-96.63 54.822-96.63 111.582 0 62.298 50.668 112.966 113.243 112.966h289.614c52.329 0 94.969-42.362 94.969-94.693 0-45.131-32.118-83.063-74.48-92.2zm-20.489 144.53H114.327c-39.04 0-70.881-31.564-70.881-70.604s31.841-70.604 70.881-70.604c18.827 0 36.548 7.475 49.838 20.766 19.963 19.963 50.133-10.227 30.18-30.18-14.675-14.398-32.672-24.365-52.053-29.349 19.935-44.3 64.79-73.926 114.628-73.926 69.496 0 125.979 56.483 125.979 125.702 0 13.568-2.215 26.857-6.369 39.594-8.943 27.517 32.133 38.939 40.147 13.29 2.769-8.306 4.984-16.889 6.369-25.472 19.381 7.476 33.502 26.303 33.502 48.453 0 28.795-23.535 52.33-52.607 52.33zm235.069-52.33c0 44.024-12.737 86.386-37.102 122.657-4.153 6.092-10.798 9.414-17.72 9.414-16.317 0-27.127-18.826-17.443-32.949 19.381-29.349 29.903-63.682 29.903-99.122s-10.521-69.773-29.903-98.845c-15.655-22.831 19.361-47.24 35.163-23.534 24.366 35.993 37.102 78.356 37.102 122.379zm-70.88 0c0 31.565-9.137 62.021-26.857 88.325-4.153 6.091-10.798 9.136-17.72 9.136-17.201 0-27.022-18.979-17.443-32.948 13.013-19.104 19.658-41.255 19.658-64.513 0-22.981-6.645-45.408-19.658-64.512-15.761-22.986 19.008-47.095 35.163-23.535 17.719 26.026 26.857 56.483 26.857 88.047z"/></svg></a></li>
-            </ul>
-            <p class="text-xs">&copy; Website designed &amp; built by Danny Masao Winston</p>
-          </footer>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <title>Danny MW</title>
+        <meta name="description" content="A DJ based in Tokyo."/>
+        <script>
+            document.documentElement.classList.remove("no-js");
+
+        </script>
+        <style type="text/css">
+            .sr{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}@-webkit-keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.loading-screen{position:fixed;top:0;left:0;width:100%;height:100vh;height:calc(var(--vh, 1vh)*100);z-index:1000;background-color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:opacity 1s ease-in-out;transition:opacity 1s ease-in-out}.is-fading .loading-screen{opacity:0}.is-loaded .loading-screen{display:none!important}.loader{overflow:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load 1.1s linear infinite;animation:load 1.1s linear infinite;color:#1a202c}.loader svg{fill:currentColor;width:4rem;height:4rem;display:inline-block}.no-js .loading-screen{display:none!important}
+        </style>
+        <link rel="stylesheet" href="/css/styles.min.css?v=1.0.0">
+        
+    </head>
+    <body class="relative">
+        <div class="loading-screen">
+            <div class="loader">
+                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M100,0A100,100,0,1,0,200,100,100,100,0,0,0,100,0ZM14.35,56.67a96.65,96.65,0,0,1,42.49-42.4l.91,1.78A94.57,94.57,0,0,0,16.14,57.57ZM25.1,62.05l-1.79-.89a86.56,86.56,0,0,1,38.11-38L62.34,25A84.54,84.54,0,0,0,25.1,62.05Zm7.15,3.58A76.49,76.49,0,0,1,66,32.06l.92,1.78A74.47,74.47,0,0,0,34,66.52Zm8.94,4.47A66.38,66.38,0,0,1,70.58,41l.91,1.77A64.41,64.41,0,0,0,43,71Zm10.73,5.36-1.79-.89a56.34,56.34,0,0,1,25-24.74l.91,1.78A54.34,54.34,0,0,0,51.92,75.46ZM100,135a35,35,0,1,1,35-35A35,35,0,0,1,100,135Z"/></svg>
+            </div>
+            <div class="sr">Loading...</div>
         </div>
-      </div>
-    </div>
-    <script src="../js/lazysizes.min.js"> </script>
-    <script src="../js/sal.js"> </script>
-    <script src="../js/clipboard.min.js"></script>
-    <script src="../js/scripts.min.js?v=0.0.1"> </script>
-  </body>
+        <div class="bg-image" id="bgImage"></div>
+        <div class="content-wrapper" id="content">
+            <div class="container mx-auto">
+                <div class="mx-5 md:mx-10">
+                    <header class="header flex flex-col text-white pb-16 relative">
+                        <h1 class="site-title leading-none mt-auto animate animate-to-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="295.21" height="63" viewBox="0 0 295.21 63"><path d="M15.66,0Q23,0,26.73,4t3.69,11.61V47.43q0,7.65-3.69,11.61T15.66,63H0V0ZM9.9,54h5.58a4.77,4.77,0,0,0,3.73-1.44c.87-1,1.31-2.52,1.31-4.68V15.12c0-2.16-.44-3.72-1.31-4.68A4.77,4.77,0,0,0,15.48,9H9.9Z"/><path d="M57.77,63,56.06,51.57H43.91L42.2,63H33.11L43.19,0H57.68L67.76,63ZM54.71,43,49.94,11.16,45.17,43Z"/><path d="M82.17,63H73.26V0H85.68L95.85,37.71V0h8.82V63H94.5L82.17,17.37Z"/><path d="M120.6,63h-8.91V0h12.42l10.17,37.71V0h8.82V63H132.93L120.6,17.37Z"/><path d="M147,0h10.35l7.56,28.71L172.44,0h9.45L169.38,42.12V63h-9.9V42.12Z"/><path d="M227.52,0h13.77V63h-9.36V17.82L225.09,63h-9.36l-7.38-44.55V63h-8.64V0h13.77l7.29,44.73Z"/><path d="M267.84,63H254.25l-7-63h9.64l5.3,49.68L266.94,0h9.54l4.95,50,5.13-50h8.65l-7,63H275l-3.6-33.57Z"/></svg>
+                            <span class="sr">DANNY MW</span></h1>
+                        <span class="header-border animate animate-to-right delay-1"></span>
+                        <p class="leading-none text-lg animate animate-to-right delay-2">A DJ Based in Tokyo</p>
+
+                        <ul class="follow-list py-10 animate animate-to-left delay-3">
+                            <li class="follow-list-item">
+                                <a href="https://twitter.com/DannyMasao1024" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                    <span class="sr">Twitter</span>
+                                </a>
+                            </li>
+                            <li class="follow-list-item">
+                                <a href="https://www.instagram.com/dannymasao/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="448" height="512" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                                    <span class="sr">Instagram</span>
+                                </a>
+                            </li>
+                            <li class="follow-list-item">
+                                <a href="https://www.mixcloud.com/dannymasao/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="640" height="512" viewBox="0 0 640 512"><path d="M424.43 219.729C416.124 134.727 344.135 68 256.919 68c-72.266 0-136.224 46.516-159.205 114.074-54.545 8.029-96.63 54.822-96.63 111.582 0 62.298 50.668 112.966 113.243 112.966h289.614c52.329 0 94.969-42.362 94.969-94.693 0-45.131-32.118-83.063-74.48-92.2zm-20.489 144.53H114.327c-39.04 0-70.881-31.564-70.881-70.604s31.841-70.604 70.881-70.604c18.827 0 36.548 7.475 49.838 20.766 19.963 19.963 50.133-10.227 30.18-30.18-14.675-14.398-32.672-24.365-52.053-29.349 19.935-44.3 64.79-73.926 114.628-73.926 69.496 0 125.979 56.483 125.979 125.702 0 13.568-2.215 26.857-6.369 39.594-8.943 27.517 32.133 38.939 40.147 13.29 2.769-8.306 4.984-16.889 6.369-25.472 19.381 7.476 33.502 26.303 33.502 48.453 0 28.795-23.535 52.33-52.607 52.33zm235.069-52.33c0 44.024-12.737 86.386-37.102 122.657-4.153 6.092-10.798 9.414-17.72 9.414-16.317 0-27.127-18.826-17.443-32.949 19.381-29.349 29.903-63.682 29.903-99.122s-10.521-69.773-29.903-98.845c-15.655-22.831 19.361-47.24 35.163-23.534 24.366 35.993 37.102 78.356 37.102 122.379zm-70.88 0c0 31.565-9.137 62.021-26.857 88.325-4.153 6.091-10.798 9.136-17.72 9.136-17.201 0-27.022-18.979-17.443-32.948 13.013-19.104 19.658-41.255 19.658-64.513 0-22.981-6.645-45.408-19.658-64.512-15.761-22.986 19.008-47.095 35.163-23.535 17.719 26.026 26.857 56.483 26.857 88.047z"/></svg>
+                                    <span class="sr">Mixcloud</span>
+                                </a>
+                            </li>
+                            <li class="follow-list-item lang-link">
+                                    <a href="/">JAPANESE</a>
+                            </li>
+
+                        </ul>
+                    </header>
+
+                    <main class="bg-white py-10 px-5 md:px-10 rounded-sm">
+                        <section>
+                            <header class="section-title" data-sal="slide-up">
+                                <span class="record-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M100,0A100,100,0,1,0,200,100,100,100,0,0,0,100,0ZM14.35,56.67a96.65,96.65,0,0,1,42.49-42.4l.91,1.78A94.57,94.57,0,0,0,16.14,57.57ZM25.1,62.05l-1.79-.89a86.56,86.56,0,0,1,38.11-38L62.34,25A84.54,84.54,0,0,0,25.1,62.05Zm7.15,3.58A76.49,76.49,0,0,1,66,32.06l.92,1.78A74.47,74.47,0,0,0,34,66.52Zm8.94,4.47A66.38,66.38,0,0,1,70.58,41l.91,1.77A64.41,64.41,0,0,0,43,71Zm10.73,5.36-1.79-.89a56.34,56.34,0,0,1,25-24.74l.91,1.78A54.34,54.34,0,0,0,51.92,75.46ZM100,135a35,35,0,1,1,35-35A35,35,0,0,1,100,135Z"/></svg>
+                                </span>
+                                <h2>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="166.69" height="64.44" viewBox="0 0 166.69 64.44"><path d="M27.81.72H41.58v63H32.22V18.54L25.38,63.72H16L8.64,19.17V63.72H0V.72H13.77l7.29,44.73Z"/><path d="M59.68.72v63h-9.9V.72Z"/><path d="M89.56,31.32l11.07,32.4H90.19l-8.1-24.93L73.9,63.72H64.63L75.7,31.32,65.35.72H75.61l7.47,23.22L90.73.72h9.18Z"/><path d="M129.07,27.27v9H115.48V54.72h17.1v9h-27V.72h27v9h-17.1V27.27Z"/><path d="M141.13,4.1Q144.82,0,152,0t10.89,4.1q3.69,4.1,3.69,11.74v2h-9.36V15.21A7.22,7.22,0,0,0,156,10.49a5.31,5.31,0,0,0-7.38,0,7.22,7.22,0,0,0-1.26,4.72,11.63,11.63,0,0,0,2.11,6.93,43.17,43.17,0,0,0,6.35,6.75,78.65,78.65,0,0,1,5.67,5.71,23.2,23.2,0,0,1,3.69,6,19.87,19.87,0,0,1,1.53,8q0,7.65-3.78,11.74t-11,4.1q-7.2,0-11-4.1T137.17,48.6V44.73h9.36v4.5q0,6.12,5.13,6.12t5.13-6.12a11.64,11.64,0,0,0-2.12-6.93,43,43,0,0,0-6.34-6.75,76.67,76.67,0,0,1-5.67-5.71,23,23,0,0,1-3.69-6,19.87,19.87,0,0,1-1.53-8Q137.44,8.19,141.13,4.1Z"/></svg>
+                                    <span class="sr">MIXES</span>
+                                </h2>
+                            </header>
+                            <ul class="img-grid img-grid-mix py-10 img-fade" data-sal="fade">
+                                <li>
+                                        <a class="block img-hover" href="https://www.mixcloud.com/dannymasao/grooves-2016/" target="_blank">
+                                            <div class="img-thumbnail">
+                                                <img class="lazyload" data-src="/img/grooves2016.jpg" alt="Grooves 2016のジャケット">
+                                            </div>
+                                            <h3 class="text-xl font-bold mt-3">Grooves 2016</h3>
+                                            <p class="text-sm mt-2">A mix of some of my favorite house, disco and funk jams from 2016.</p>
+                                        </a>
+                                    </li>
+                                <li>
+                                        <a class="block img-hover" href="https://www.mixcloud.com/dannymasao/vibes-2016/" target="_blank">
+                                            <div class="img-thumbnail">
+                                                <img class="lazyload" data-src="/img/vibes2016.jpg" alt="Vibes 2016のジャケット">
+                                            </div>
+                                            <h3 class="text-xl font-bold mt-3">Vibes 2016</h3>
+                                            <p class="text-sm mt-2">My favorite hip hop, R&amp;B and soul tracks from 2016.</p>
+                                        </a>
+                                    </li>
+                                <li>
+                                        <a class="block img-hover" href="https://www.mixcloud.com/dannymasao/vibez-2015/" target="_blank">
+                                            <div class="img-thumbnail">
+                                                <img class="lazyload" data-src="/img/vibez2015.jpg" alt="Vibez 2015のジャケット">
+                                            </div>
+                                            <h3 class="text-xl font-bold mt-3">Vibez 2015</h3>
+                                            <p class="text-sm mt-2">Mellow hiphop and beat music with soul.</p>
+                                        </a>
+                                    </li>
+                                <li>
+                                        <a class="block img-hover" href="https://www.mixcloud.com/dannymasao/laser-gun-funk-mixed-by-shade-sky/" target="_blank">
+                                            <div class="img-thumbnail">
+                                                <img class="lazyload" data-src="/img/lasergunfunk.jpg" alt="Laser Gun Funkのジャケット">
+                                            </div>
+                                            <h3 class="text-xl font-bold mt-3">Laser Gun Funk</h3>
+                                            <p class="text-sm mt-2">A blend of tracks that sample or rework &#39;80s synth funk.</p>
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </section>
+                        <section class="mt-20">
+                            <header class="section-title" data-sal="slide-up">
+                                <span class="record-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path d="M100,0A100,100,0,1,0,200,100,100,100,0,0,0,100,0ZM14.35,56.67a96.65,96.65,0,0,1,42.49-42.4l.91,1.78A94.57,94.57,0,0,0,16.14,57.57ZM25.1,62.05l-1.79-.89a86.56,86.56,0,0,1,38.11-38L62.34,25A84.54,84.54,0,0,0,25.1,62.05Zm7.15,3.58A76.49,76.49,0,0,1,66,32.06l.92,1.78A74.47,74.47,0,0,0,34,66.52Zm8.94,4.47A66.38,66.38,0,0,1,70.58,41l.91,1.77A64.41,64.41,0,0,0,43,71Zm10.73,5.36-1.79-.89a56.34,56.34,0,0,1,25-24.74l.91,1.78A54.34,54.34,0,0,0,51.92,75.46ZM100,135a35,35,0,1,1,35-35A35,35,0,0,1,100,135Z"/></svg>
+                                </span>
+                                <h2>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="211.77" height="64.44" viewBox="0 0 211.77 64.44"><path d="M25.65,4.68q3.69,4,3.69,11.61v8.19q0,7.65-3.69,11.61t-11.07,4H9.9V63.72H0V.72H14.58Q22,.72,25.65,4.68ZM9.9,31.05h4.68a4.67,4.67,0,0,0,3.65-1.35c.8-.9,1.21-2.43,1.21-4.59V15.66c0-2.16-.41-3.69-1.21-4.59a4.67,4.67,0,0,0-3.65-1.35H9.9Z"/><path d="M54.36,60.84A43.32,43.32,0,0,1,54.18,56v-9.9q0-4.32-1.53-6.16T47.7,38.07H44.28V63.72h-9.9V.72H49.32Q57,.72,60.48,4.28T64,15.21v4.95q0,9.72-6.48,12.78a9.12,9.12,0,0,1,5,4.81,20.92,20.92,0,0,1,1.53,8.6v9.72a42.09,42.09,0,0,0,.18,4.36,10.9,10.9,0,0,0,.9,3.29H55.08A14.43,14.43,0,0,1,54.36,60.84ZM44.28,29.07h3.87a5.93,5.93,0,0,0,4.45-1.53q1.49-1.53,1.49-5.13V16.2q0-3.42-1.22-4.95a4.58,4.58,0,0,0-3.82-1.53H44.28Z"/><path d="M73.62,4.14Q77.49,0,84.78,0T95.94,4.14q3.87,4.14,3.87,11.7V48.6q0,7.56-3.87,11.7T84.78,64.44q-7.29,0-11.16-4.14T69.75,48.6V15.84Q69.75,8.28,73.62,4.14Zm11.16,51.3q5.13,0,5.13-6.21v-34Q89.91,9,84.78,9t-5.13,6.21v34Q79.65,55.44,84.78,55.44Z"/><path d="M128.88,28.71v9H116.1v26h-9.9V.72h26.19v9H116.1v19Z"/><path d="M147.06.72v63h-9.9V.72Z"/><path d="M164.16.72v54h16.29v9H154.26V.72Z"/><path d="M208.26,27.27v9H194.67V54.72h17.1v9h-27V.72h27v9h-17.1V27.27Z"/></svg>
+                                    <span class="sr">PROFILE</span>
+                                </h2>
+                            </header>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <dl class="profile-list py-10">
+                                <div data-sal="slide-up">
+                                    <dt>Name</dt>
+                                    <dd>
+                                        <p class="font-bold text-2xl" id="djName">Danny MW</p>
+                                        <div class="relative mt-2">
+                                            <button class="button copy-button" data-clipboard-target="#djName">COPY</button>
+                                        </div>
+                                    </dd>
+                                </div>
+                                <div data-sal="slide-up">
+                                    <dt>Location</dt>
+                                    <dd>Tokyo</dd>
+                                </div>
+                                <div data-sal="slide-up">
+                                    <dt>Genre</dt>
+                                    <dd>hiphop, R&amp;B, neo soul, jazz, funk, disco, boogie, house</dd>
+                                </div>
+                                <div data-sal="slide-up">
+                                    <dt>Bio</dt>
+                                    <dd>
+                                        <p class="copy-text" id="bioText">I&#39;m a DJ that loves playing at chill spaces like cafes, bars and lounges. You can usually find me behind the decks playing mellow and soulful tracks with head-nodding beats or smooth, dancable jams that gets you moving.</p>
+                                        <div class="relative mt-2">
+                                            <button class="button copy-button" data-clipboard-target="#bioText">COPY</button>
+                                        </div>
+                                    </dd>
+                                </div>
+                                <div data-sal="slide-up">
+                                    <dt>Photos</dt>
+                                    <dd class="w-full">
+                                        <ul class="img-photos img-fade" data-sal="fade">
+                                            <li>
+                                                <a class="img-thumbnail img-hover" href="/img/dannymw.jpg">
+                                                    <img class="lazyload" data-src="/img/dannymw.jpg" alt="Danny MW Photo">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="img-thumbnail img-hover" href="/img/dannymw2.jpg">
+                                                    <img class="lazyload" data-src="/img/dannymw2.jpg" alt="Danny MW Photo">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </div>
+                            </dl>
+                        </section>
+                    </main>
+
+                    <footer class="footer text-white py-5 text-center">
+                        <ul class="follow-list py-10" data-sal="slide-up">
+                            <li class="follow-list-item">
+                                <a href="https://twitter.com/DannyMasao1024" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+                                    <span class="sr">Twitter</span>
+                                </a>
+                            </li>
+                            <li class="follow-list-item">
+                                <a href="https://www.instagram.com/dannymasao/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="448" height="512" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                                    <span class="sr">Instagram</span>
+                                </a>
+                            </li>
+                            <li class="follow-list-item">
+                                <a href="https://www.mixcloud.com/dannymasao/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="640" height="512" viewBox="0 0 640 512"><path d="M424.43 219.729C416.124 134.727 344.135 68 256.919 68c-72.266 0-136.224 46.516-159.205 114.074-54.545 8.029-96.63 54.822-96.63 111.582 0 62.298 50.668 112.966 113.243 112.966h289.614c52.329 0 94.969-42.362 94.969-94.693 0-45.131-32.118-83.063-74.48-92.2zm-20.489 144.53H114.327c-39.04 0-70.881-31.564-70.881-70.604s31.841-70.604 70.881-70.604c18.827 0 36.548 7.475 49.838 20.766 19.963 19.963 50.133-10.227 30.18-30.18-14.675-14.398-32.672-24.365-52.053-29.349 19.935-44.3 64.79-73.926 114.628-73.926 69.496 0 125.979 56.483 125.979 125.702 0 13.568-2.215 26.857-6.369 39.594-8.943 27.517 32.133 38.939 40.147 13.29 2.769-8.306 4.984-16.889 6.369-25.472 19.381 7.476 33.502 26.303 33.502 48.453 0 28.795-23.535 52.33-52.607 52.33zm235.069-52.33c0 44.024-12.737 86.386-37.102 122.657-4.153 6.092-10.798 9.414-17.72 9.414-16.317 0-27.127-18.826-17.443-32.949 19.381-29.349 29.903-63.682 29.903-99.122s-10.521-69.773-29.903-98.845c-15.655-22.831 19.361-47.24 35.163-23.534 24.366 35.993 37.102 78.356 37.102 122.379zm-70.88 0c0 31.565-9.137 62.021-26.857 88.325-4.153 6.091-10.798 9.136-17.72 9.136-17.201 0-27.022-18.979-17.443-32.948 13.013-19.104 19.658-41.255 19.658-64.513 0-22.981-6.645-45.408-19.658-64.512-15.761-22.986 19.008-47.095 35.163-23.535 17.719 26.026 26.857 56.483 26.857 88.047z"/></svg>
+                                    <span class="sr">Mixcloud</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="text-xs">&copy; Website designed &amp; built by Danny Masao Winston</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script src="/js/lazysizes.min.js"></script>
+        <script src="/js/sal.js"></script>
+        <script src="/js/clipboard.min.js"></script>
+        <script src="/js/scripts.min.js?v=1.0.0"></script>
+    </body>
 </html>
