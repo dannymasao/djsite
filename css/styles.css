@@ -671,36 +671,6 @@ body.user-is-tabbing *:focus {
   bottom: 0;
 }
 
-/* .bg-gradient {
-	overflow: hidden;
-
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: block;
-		content: "";
-		background-image: linear-gradient(270deg, #24a1dc, #5148b4, #8a48c1);
-		background-size: 100%;
-		z-index: -1;
-	}
-} */
-
-/* .bg-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	mix-blend-mode: multiply;
-	background-color: white;
-	display: block;
-	width: 100%;
-	height: 100vh;
-	object-fit: cover;
-	filter: grayscale(100%) blur(1px);
-} */
-
 .bg-image {
   position: absolute;
   top: 0;
@@ -708,16 +678,12 @@ body.user-is-tabbing *:focus {
   width: 100%;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  /* mix-blend-mode: multiply; */
   background-color: #5148b4;
   background-image: url(../img/dannymw-bg3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* object-fit: cover; */
 }
-
-/* filter: grayscale(100%) blur(1px); */
 
 .bg-image::after {
     content: "";
@@ -981,12 +947,18 @@ body.user-is-tabbing *:focus {
     .profile-list dt {
       -ms-flex-negative: 0;
           flex-shrink: 0;
-      width: 12rem;
+      width: 30%;
     }
 
     .profile-list dd {
       margin-top: 0;
       line-height: 1.8;
+    }
+  }
+
+@media (min-width: 1024px) {
+    .profile-list dt {
+      width: 25%;
     }
   }
 
@@ -5760,7 +5732,7 @@ body.user-is-tabbing *:focus {
 /* Custom Utilies */
 
 .container {
-  max-width: 1024px;
+  max-width: 1280px;
 }
 
 /* .font-display {
@@ -5799,9 +5771,10 @@ body.user-is-tabbing *:focus {
   }
 
 :root {
+  --animation-speed-fast: 0.25s;
   --animation-speed: 0.4s;
-  --animation-speed-slow: 0.6s;
-  --animation-timing: cubic-bezier(0, 0, 0.2, 1);
+  --animation-speed-slow: 1s;
+  --animation-timing: ease-out; /* cubic-bezier(0, 0, 0.2, 1); */
 }
 
 /* Animation On Load (above the fold) */
@@ -5811,8 +5784,8 @@ body.user-is-tabbing *:focus {
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
-  -webkit-transition-duration: var(--animation-speed);
-          transition-duration: var(--animation-speed);
+  -webkit-transition-duration: var(--animation-speed-fast);
+          transition-duration: var(--animation-speed-fast);
   -webkit-transition-timing-function: var(--animation-timing);
           transition-timing-function: var(--animation-timing);
   opacity: 0;
@@ -5835,30 +5808,30 @@ body.user-is-tabbing *:focus {
 }
 
 .delay-1 {
-  -webkit-transition-delay: var(--animation-speed);
-          transition-delay: var(--animation-speed);
+  -webkit-transition-delay: var(--animation-speed-fast);
+          transition-delay: var(--animation-speed-fast);
 }
 
 .delay-2 {
-  -webkit-transition-delay: calc(var(--animation-speed) * 2);
-          transition-delay: calc(var(--animation-speed) * 2);
+  -webkit-transition-delay: calc(var(--animation-speed-fast) * 2);
+          transition-delay: calc(var(--animation-speed-fast) * 2);
 }
 
 .delay-3 {
-  -webkit-transition-delay: calc(var(--animation-speed) * 3);
-          transition-delay: calc(var(--animation-speed) * 3);
+  -webkit-transition-delay: calc(var(--animation-speed-fast) * 3);
+          transition-delay: calc(var(--animation-speed-fast) * 3);
 }
 
 .delay-4 {
-  -webkit-transition-delay: calc(var(--animation-speed) * 4);
-          transition-delay: calc(var(--animation-speed) * 4);
+  -webkit-transition-delay: calc(var(--animation-speed-fast) * 4);
+          transition-delay: calc(var(--animation-speed-fast) * 4);
 }
 
 /* Animation On Scroll (Below the fold. SAL library) */
 
 [data-sal] {
-  -webkit-transition-duration: var(--animation-speed);
-          transition-duration: var(--animation-speed);
+  -webkit-transition-duration: var(--animation-speed-slow);
+          transition-duration: var(--animation-speed-slow);
   -webkit-transition-timing-function: var(--animation-timing);
           transition-timing-function: var(--animation-timing);
 }
@@ -5887,36 +5860,34 @@ body.user-is-tabbing *:focus {
   }
 
 [data-sal|="fade"].img-fade > *:nth-child(2) {
-    -webkit-transition-delay: var(--animation-speed-slow);
-            transition-delay: var(--animation-speed-slow);
+    -webkit-transition-delay: calc(var(--animation-speed-slow) / 2);
+            transition-delay: calc(var(--animation-speed-slow) / 2);
   }
 
 [data-sal|="fade"].img-fade > *:nth-child(3) {
-    -webkit-transition-delay: calc(var(--animation-speed-slow) * 2);
-            transition-delay: calc(var(--animation-speed-slow) * 2);
+    -webkit-transition-delay: calc((var(--animation-speed-slow) / 2) * 2);
+            transition-delay: calc((var(--animation-speed-slow) / 2) * 2);
   }
 
 [data-sal|="fade"].img-fade > *:nth-child(4) {
-    -webkit-transition-delay: calc(var(--animation-speed-slow) * 3);
-            transition-delay: calc(var(--animation-speed-slow) * 3);
+    -webkit-transition-delay: calc((var(--animation-speed-slow) / 2) * 3);
+            transition-delay: calc((var(--animation-speed-slow) / 2) * 3);
   }
 
 [data-sal|="fade"].img-fade > *:nth-child(5) {
-    -webkit-transition-delay: calc(var(--animation-speed-slow) * 4);
-            transition-delay: calc(var(--animation-speed-slow) * 4);
+    -webkit-transition-delay: calc((var(--animation-speed-slow) / 2) * 4);
+            transition-delay: calc((var(--animation-speed-slow) / 2) * 4);
   }
 
 [data-sal="slide-up"] {
   /* transform: translateY(100px); */
-  -webkit-transform: translate3d(0, 50px, 0);
-          transform: translate3d(0, 50px, 0);
+  /* transform: translate3d(0, 10px, 0); */
 }
 
 [data-sal|="slide"].sal-animate {
   opacity: 1;
   /* transform: none; */
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  /* transform: translateY(0); */
 }
 
 /* [data-sal|="fade"].sal-animate {

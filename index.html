@@ -12,8 +12,8 @@
         <style type="text/css">
             .sr{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}@-webkit-keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes load{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.loading-screen{position:fixed;top:0;left:0;width:100%;height:100vh;height:calc(var(--vh, 1vh)*100);z-index:1000;background-color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-transition:opacity 1s ease-in-out;transition:opacity 1s ease-in-out}.is-fading .loading-screen{opacity:0}.is-loaded .loading-screen{display:none!important}.loader{overflow:hidden;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-animation:load 1.1s linear infinite;animation:load 1.1s linear infinite;color:#1a202c}.loader svg{fill:currentColor;width:4rem;height:4rem;display:inline-block}.no-js .loading-screen{display:none!important}
         </style>
-        <link rel="stylesheet" href="/css/styles.min.css?v=1.0.0">
         
+        <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body class="relative">
         <div class="loading-screen">
@@ -148,7 +148,7 @@
                                 <div data-sal="slide-up">
                                     <dt>プロフィール文</dt>
                                     <dd>
-                                        <p class="copy-text" id="bioText">メロウでソウルフルでジャジーでファンキーなサウンドを日夜追い求めるDJ。かつてはWax Poetics Japan Crewの一員として活動し、海外の大物ゲストのサポートも担当した。現在のテーマは、70年代のソウルやファンク、または90年代のヒップホップといった黄金期の伝統を踏襲しつつも現在進行系で進化する今の時代のサウンドをかけること。夜が似合う音が得意。</p>
+                                        <p class="copy-text" id="bioText">メロウでソウルフルでジャジーでファンキーなサウンドを日夜追い求めるDJ。かつてはWax Poetics Japan Crewの一員として活動し、海外の大物ゲストのサポートも担当した。70年代のソウルやファンク、または90年代のヒップホップといった黄金期の伝統を踏襲しつつも進化する、今の時代のサウンドを掘ることが最近のテーマ。夜が似合う音が得意。</p>
                                         <div class="relative mt-2">
                                             <button class="button copy-button" data-clipboard-target="#bioText">COPY</button>
                                         </div>
@@ -201,9 +201,13 @@
                 </div>
             </div>
         </div>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
         <script src="/js/lazysizes.min.js"></script>
         <script src="/js/sal.js"></script>
         <script src="/js/clipboard.min.js"></script>
-        <script src="/js/scripts.min.js?v=1.0.0"></script>
+        <script src="/js/scripts.min.js?v=1.0.1"></script>
+        <script>
+            sal({threshold: 0.5});
+        </script>
     </body>
 </html>
