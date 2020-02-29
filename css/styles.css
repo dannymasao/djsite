@@ -611,12 +611,13 @@ video {
 /* Custom Base */
 
 html {
+  color: white;
   font-size: 1rem;
-  color: #1a202c;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
+  /* font-size: 16px; */
+  /* .text-gray-900 */
 }
 
 /* @font-face {
@@ -784,6 +785,10 @@ body.user-is-tabbing *:focus {
 }
   }
 
+.bg-main {
+  background-color: rgba(22, 22, 29, 0.6);
+}
+
 .section-title {
   line-height: 1;
   font-size: 2.25rem;
@@ -904,9 +909,10 @@ body.user-is-tabbing *:focus {
   padding-top: 100%;
   overflow: hidden;
   position: relative;
-  background-color: #cbd5e0;
-  border-radius: 0.125rem;
+  border-radius: 0.25rem;
 }
+
+/* .bg-gray-400 */
 
 .img-thumbnail img {
     position: absolute;
@@ -923,22 +929,25 @@ body.user-is-tabbing *:focus {
     }
 
 .profile-list > div {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-top-width: 1px;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    border-color: #2d3748;
+    /* .border-t */
+    /* &:last-child {
+			@apply .border-b;
+		} */
   }
-
-.profile-list > div:last-child {
-      border-bottom-width: 1px;
-    }
 
 .profile-list dt {
     font-weight: 700;
+    font-size: 1.125rem;
   }
 
 .profile-list dd {
     margin-top: 0.75rem;
     line-height: 1.8;
+    color: #e2e8f0;
   }
 
 @media (min-width: 768px) {
@@ -1099,40 +1108,55 @@ body.user-is-tabbing *:focus {
 .copy-button {
   position: relative;
   display: none;
+  border-width: 1px;
+  border-color: #fff;
+  background-color: transparent;
 }
 
 .js .copy-button {
     display: inline-block;
   }
 
-.copy-button::before {
-    content: "コピー済み";
-    display: inline-block;
-    position: absolute;
-    top: 1px;
-    left: 118%;
-    font-size: 10px;
-    padding: 0;
-    line-height: 22px;
-    color: white;
-    font-weight: bold;
+.copy-button .copied-text {
     opacity: 0;
-    /* visibility: hidden; */
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
-    width: 70px;
-    height: 23px;
-    color: #1a202c;
-    background-color: #e2e8f0;
-    border-left-color: transparent;
-    /* .border .border-gray-900 */
   }
 
-.copy-button.copied::before {
+.copy-button .copied-text::before {
+      content: "コピー完了";
+      display: inline-block;
+      position: absolute;
+      top: 1px;
+      left: 130%;
+      font-size: 10px;
+      padding: 0;
+      line-height: 22px;
+      font-weight: bold;
+      width: 70px;
+      height: 23px;
+      color: #1a202c;
+      background-color: white;
+    }
+
+.copy-button .copied-text::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 122%;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      margin-top: -5px;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+    }
+
+.copy-button.copied .copied-text {
       opacity: 1;
     }
 
-[lang="en"] .copy-button::before {
+[lang="en"] .copy-button .copied-text::before {
       content: "COPIED!";
     }
 
